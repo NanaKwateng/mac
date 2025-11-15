@@ -5,11 +5,12 @@ import { FiSearch } from "react-icons/fi";
 import { IoBagHandleOutline } from "react-icons/io5";
 import { ModeToggle } from './theme';
 import Link from 'next/link';
+import { ButtonGroup } from '../ui/button-group';
 export default function Navbar() {
   return (
     <header>
-      <nav className='backdrop-blur-md '>
-        <figure className='relative w-10 h-10'>
+      <nav className='backdrop-blur-md px-5'>
+        <figure className='relative w-7 h-7'>
             <Image src="/logo.svg" alt="logo" priority fill className='bg-black'/>      
         </figure>
       
@@ -23,18 +24,15 @@ export default function Navbar() {
             ))}
         </ul>
 
-        <div className="flex items-center">
-            <Button variant="ghost" size="icon">
-                <FiSearch size={18}/>
-                
-            </Button>
-            <Button variant="ghost" size="icon">
-
-                <IoBagHandleOutline size={18}/>
-                
-            </Button>
-            <ModeToggle />
-        </div>
+        <ButtonGroup>
+          <Button variant="outline" size="sm">
+            <FiSearch size={18}/>
+          </Button>
+          <Button variant="outline" size="sm">
+            <IoBagHandleOutline size={18}/>
+          </Button>         
+          {/* <ModeToggle /> */}
+      </ButtonGroup>
       </nav>
     </header>
   )
