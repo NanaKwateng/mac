@@ -7,7 +7,9 @@ export const navLinks = [
     { label: "AirPods" },
 ];
 
-export const noChangeParts = [
+
+
+const noChangeParts = [
     "Object_84",
     "Object_37",
     "Object_34",
@@ -139,13 +141,13 @@ export {
 };
 
 
-Junie, I need some GSAP animations added to the Performance section. Here's what I'm after: 
+// Junie, I need some GSAP animations added to the Performance section. Here's what I'm after: 
 
-The paragraph inside .content should fade in and move up slightly as it scrolls into view.
+// The paragraph inside .content should fade in and move up slightly as it scrolls into view.
 
-On desktop, I also want the performance images to animate into their positions using a scrubbed scroll timeline. Each image should be targeted by its id class, and their final positions should come from the constants (left, right, bottom, transform). Skip p5.
+// On desktop, I also want the performance images to animate into their positions using a scrubbed scroll timeline. Each image should be targeted by its id class, and their final positions should come from the constants (left, right, bottom, transform). Skip p5.
 
-On mobile (≤1024px), only the text animation should run — no image timeline.
+// On mobile (≤1024px), only the text animation should run — no image timeline.
 
-Use useGSAP with a sectionRef for scoping. Add scrollTriggers that refresh correctly on resize. Make sure the timeline uses a single scrubbed scroll trigger tied to the section, with all image animations applied at time 0.
+// Use useGSAP with a sectionRef for scoping. Add scrollTriggers that refresh correctly on resize. Make sure the timeline uses a single scrubbed scroll trigger tied to the section, with all image animations applied at time 0.
 
